@@ -1,6 +1,6 @@
 ## 🚀 Desenvolvedor iniciante focado em Python e automação. Explorando inteligência artificial e desenvolvimento web. 👩‍💻
 
-[Visite meu site pessoal](https://jhonatanrodriguesdasilva.github.io/)
+[Visite meu site pessoal]([https://jhonatanrodriguesdasilva.github.io/](https://jhonatanrodriguesdasilva.github.io/))
 
 <div align="center">
   <a href="https://github.com/JhonatanRodriguesDaSilva">
