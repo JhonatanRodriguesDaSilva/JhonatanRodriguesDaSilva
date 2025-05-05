@@ -2,7 +2,7 @@ name: Generate Snake
 
 on:
   schedule:
-    - cron: "0 0 * * *"  # A cada 24h, ou você pode ajustar conforme necessário.
+    - cron: "0 0 * * *"  # A cada 24h
   workflow_dispatch:  # Gatilho para rodar manualmente
 
 jobs:
@@ -19,13 +19,16 @@ jobs:
           outputs: |
             dist/github-contribution-grid-snake.svg
           theme: |
-            snake_color: "#4e7eff"
-            background: "#0d1117"
+            snake_color: "#4e7eff"   # Cor da cobrinha (azul)
+            background: "#0d1117"     # Cor do fundo (escuro)
             grid:
-              - color: "#0e4429"
-              - color: "#006d32"
-              - color: "#26a641"
-              - color: "#39d353"
+              - color: "#0e4429"      # Poucos commits (verde muito escuro)
+              - color: "#006d32"      # Verde escuro
+              - color: "#26a641"      # Verde médio
+              - color: "#39d353"      # Muitos commits (verde claro)
+            # Cor de fundo das células da grade (para evitar cinza)
+            grid_background: "#0d1117"   # Cor escura para o fundo da grade
+
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
