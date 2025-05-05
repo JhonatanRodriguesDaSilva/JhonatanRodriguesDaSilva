@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cobrinha de Contribuições GitHub</title>
+    <style>
+        body {
+            background-color: #0d1117;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(7, 20px);
+            grid-template-rows: repeat(5, 20px);
+            gap: 2px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cell {
+            width: 20px;
+            height: 20px;
+            border-radius: 3px;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Cores dos commits */
+        .very-dark-green { background-color: #0e4429; }
+        .dark-green { background-color: #006d32; }
+        .medium-green { background-color: #26a641; }
+        .light-green { background-color: #39d353; }
+
+        /* Cobrinha */
+        .snake {
+            background-color: #4e7eff;
+        }
+
+        /* Animação */
+        @keyframes snake-move {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(20px, 0); }
+        }
+
+        .snake-move {
+            animation: snake-move 0.5s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid" id="grid">
+        <!-- Cells will be populated by JS -->
+    </div>
+
+    <script>
+        // Simulação dos dados de contribuições
+        const contributions = [
+            0, 0, 1, 0, 2, 0, 3,
+            0, 0, 4, 0, 5, 0, 0,
+            1, 0, 6, 0, 7, 0, 0,
+            0, 8, 0, 9, 0, 0, 10,
+            0, 0, 0, 0, 0, 0, 0
+        ];
+
+        // Função para criar o grid de células
+        function createGrid() {
+            const grid = document.getElementById('grid');
+            contributions.forEach((contribution, index) => {
+                const cell = document.createElement('div');
+                cell.classList.add('cell');
+                // Atribui a cor com base nas contribuições
+                if (contribution === 0) {
+                    cell.classList.add('very-dark-green');
+                } else if (contribution <= 3) {
+                    cell.classList.add('dark-green');
+                } else if (contribution <= 6) {
+                    cell.classList.add('medium-green');
+                } else {
+                    cell.classList.add('light-green');
+                }
+                grid.appendChild(cell);
+            });
+        }
+
+        // Função para mover a cobrinha
+        function moveSnake() {
+            const gridCells = document.querySelectorAll('.cell');
+            const snake = gridCells[Math.floor(Math.random() * gridCells.length)];
+            snake.classList.add('snake', 'snake-move');
+        }
+
+        // Atualizar a cobrinha e o grid
+        function updateGrid() {
+            createGrid();
+            setInterval(moveSnake, 1000);
+        }
+
+        // Inicializa o grid e a cobrinha
+        updateGrid();
+    </script>
+</body>
+</html>
