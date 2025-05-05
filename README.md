@@ -21,20 +21,4 @@
  
   <a href="https://www.freepik.com/free-photo/coffee_1271492.htm" target="_blank"><img src="https://github.com/IsadoraFerrao/IsadoraFerrao/blob/main/coffee.png" alt="Free coffee for visitors" style="height: 40px !important;width: 150px !important;" ></a>
   
-## Contribuições
-<picture>
-  <source
-    media="(prefers-color-scheme: dark)"
-    srcset="https://github.com/JhonatanRodriguesDaSilva/JhonatanRodriguesDaSilva/blob/output/github-contribution-grid-snake.svg"
-  />
-  <source
-    media="(prefers-color-scheme: light)"
-    srcset="https://github.com/JhonatanRodriguesDaSilva/JhonatanRodriguesDaSilva/blob/output/github-contribution-grid-snake.svg"
-  />
-<img
-  alt="github contribution grid snake animation"
-  src="https://github.com/JhonatanRodriguesDaSilva/JhonatanRodriguesDaSilva/blob/output/github-contribution-grid-snake-dark.svg"
-/>
-</picture>
-
 </div>
