@@ -18,7 +18,14 @@ jobs:
           github_user_name: JhonatanRodriguesDaSilva
           outputs: |
             ./github-contribution-grid-snake.svg
-          config_file: ./snk.config.yaml
+          theme: |
+            snake_color: "#4e7eff"
+            background: "#0d1117"
+            grid:
+              - color: "#0e4429"
+              - color: "#006d32"
+              - color: "#26a641"
+              - color: "#39d353"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
