@@ -33,6 +33,17 @@
 ### 🐍 Minha cobrinha de commits
 ![Snake animation](https://raw.githubusercontent.com/JhonatanRodriguesDaSilva/JhonatanRodriguesDaSilva/output/github-contribution-grid-snake.svg)
 
+#### Como funciona?
+A animação acima é gerada automaticamente pelo workflow [`snake.yml`](.github/workflows/snake.yml).
+Ele roda todos os dias (ou manualmente) e utiliza a action
+[Platane/snk](https://github.com/Platane/snk) para criar o arquivo
+`github-contribution-grid-snake.svg`.
+O resultado é enviado para o branch `output`, de onde é publicado neste README.
+
+Para reutilizar essa configuração em outro repositório, copie o workflow e
+altere o valor de `github_user_name`. É necessário ter um `GITHUB_TOKEN`
+com permissão de escrita para que o push seja realizado.
+
 ---
 
 ### ☕ Me paga um café?
